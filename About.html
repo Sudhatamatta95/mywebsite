@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Sudha the Artist</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #fdf6e3 0%, #ffe0ec 100%);
+      padding: 0;
+      margin: 0;
+      color: #333;
+    }
+    .about-hero {
+      background: linear-gradient(90deg, #f7c873 0%, #ffe0ec 100%);
+      padding: 48px 0 28px 0;
+      text-align: center;
+      border-bottom: 4px solid #e26ba7;
+      margin-bottom: 30px;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(85,60,154,0.08);
+      animation: fadeInDown 1.2s;
+    }
+    .about-hero h1 {
+      font-size: 2.8em;
+      color: #553c9a;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      animation: fadeInDown 1.2s;
+      text-shadow: 2px 2px 8px #ffe0ec;
+    }
+    .about-hero .paintbrush-icon {
+      margin: 0 auto 10px auto;
+      animation: floatBrush 2.5s ease-in-out infinite;
+      width: 54px;
+      height: 54px;
+    }
+    .about-hero p {
+      color: #e26ba7;
+      font-size: 1.3em;
+      margin-bottom: 0;
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 6px #fff;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes floatBrush {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-14px);}
+    }
+    .about-content {
+      max-width: 850px;
+      margin: 30px auto 40px auto;
+      background: rgba(255,255,255,0.97);
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(85,60,154,0.13);
+      padding: 40px 36px 32px 36px;
+      border-left: 7px solid #e26ba7;
+      border-right: 7px solid #f7c873;
+      animation: fadeIn 1.5s;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-content::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #f7c87355 60%, transparent 100%);
+      z-index: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
+    }
+    .about-content h2 {
+      color: #6b4fe0;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-size: 1.6em;
+      border-bottom: 2px solid #f7c873;
+      display: inline-block;
+      padding-bottom: 2px;
+      z-index: 1;
+      position: relative;
+    }
+    .about-list {
+      margin: 18px 0 0 0;
+      padding: 0 0 0 18px;
+      z-index: 1;
+      position: relative;
+    }
+    .about-list li {
+      margin-bottom: 10px;
+      font-size: 1.13em;
+      line-height: 1.5;
+      transition: background 0.3s;
+      border-radius: 6px;
+      padding: 2px 6px;
+    }
+    .about-list li:hover {
+      background: #ffe0ec;
+    }
+    .highlight {
+      background: #f7c873;
+      color: #553c9a;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 1px 4px #ffe0ec;
+    }
+    .artist-section {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 2px dashed #e26ba7;
+      z-index: 1;
+      position: relative;
+    }
+    .artist-photo {
+      float: right;
+      margin-left: 24px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 12px rgba(85,60,154,0.13);
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 3px solid #f7c873;
+      background: #fff;
+      transition: transform 0.3s;
+    }
+    .artist-photo:hover {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 6px 24px #e26ba7aa;
+    }
+    .fun-fact {
+      background: #e26ba7;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      margin: 28px 0 0 0;
+      font-size: 1.1em;
+      box-shadow: 0 2px 8px #f7c87344;
+      display: inline-block;
+      animation: fadeIn 2s;
+    }
+    .signature {
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      color: #e26ba7;
+      font-size: 2em;
+      margin-top: 24px;
+      display: block;
+      text-align: right;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 6px #f7c873;
+    }
+    @media (max-width: 600px) {
+      .about-content { padding: 18px 6px; }
+      .artist-photo { float: none; display: block; margin: 0 auto 18px auto;}
+      .about-hero h1 { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="My_logo-removebg-preview.png" alt="Artist Logo">
+        <span>Sudha Art's</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-hero">
+    <div class="paintbrush-icon">
+      <!-- SVG Paintbrush Icon -->
+      <svg width="54" height="54" viewBox="0 0 48 48" fill="none">
+        <path d="M38 10L18 30" stroke="#553c9a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M40 8C41.1046 9.10457 41.1046 10.8954 40 12L36 16C34.8954 17.1046 33.1046 17.1046 32 16L30 14C28.8954 12.8954 28.8954 11.1046 30 10L34 6C35.1046 4.89543 36.8954 4.89543 38 6L40 8Z" fill="#f7c873"/>
+      </svg>
+    </div>
+    <h1>Meet the Artist Behind the Canvas</h1>
+    <p>Where every color tells a story and every line is a heartbeat.</p>
+  </section>
+
+  <div class="about-content">
+    <h2>About Sudha’s Art</h2>
+    <p>
+      Welcome to a space where <span class="highlight">colors breathe</span>, lines tell stories, and every stroke is a whisper of emotion. Sudha’s Art Gallery is a digital haven for expressive creativity, showcasing vibrant pieces that merge technique with soul.
+    </p>
+    <ul class="about-list">
+      <li>✨ <b>Vibrant Paintings</b> that capture emotion and imagination</li>
+      <li>🎨 <b>Mandala & Doodle Art</b> for peace and mindfulness</li>
+      <li>🖌️ <b>Portraits</b> that celebrate beauty and tradition</li>
+      <li>🌿 <b>Inspired by Nature & Culture</b></li>
+    </ul>
+    <p>
+      Whether you're an admirer or an artist, this gallery invites you to experience the elegance and depth behind each creation.
+    </p>
+
+    <div class="artist-section">
+      <img src="artist-photo.jpg" alt="Artist Sudha Tamatta" class="artist-photo" onerror="this.style.display='none'">
+      <h2>About the Artist</h2>
+      <p><b>Name:</b> Sudha Tamatta</p>
+      <p><b>Art Style:</b> A versatile artist specializing in pencil sketching, portrait art, mandala designs, realistic paintings, and cultural artworks.</p>
+      <p><b>Mediums Used:</b> Graphite pencils, charcoal, colored pencils, acrylic paints, watercolor, and fine liners for detailed mandala and doodle work.</p>
+      <p><b>Pencil Sketching Focus:</b> Creating realistic pencil portraits, emotional expressions, and fine detailing using shading techniques, blending, and textures.</p>
+      <p><b>Inspiration:</b> Deeply inspired by Indian tradition, spirituality, nature, and human beauty, blending classical techniques with modern creativity.</p>
+      <p><b>Art Goal:</b> To deliver emotionally touching, culturally rich, and visually stunning artwork, capturing both realism and imagination on canvas and paper.</p>
+      <p><b>Experience:</b> 5+ years experience in fine arts, portrait sketching, and traditional art forms.</p>
+    </div>
+    <div class="fun-fact">
+      🌟 Fun Fact: Sudha believes every blank canvas is a new adventure!
+    </div>
+    <span class="signature">Sudha Tamatta</span>
+  </div>
+</body>
+</html>

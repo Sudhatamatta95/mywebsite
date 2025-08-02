@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Sudha the Artist</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #fdf6e3 0%, #ffe0ec 100%);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .contact {
+      max-width: 430px;
+      margin: 48px auto 32px auto;
+      background: rgba(255,255,255,0.97);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(85,60,154,0.13);
+      padding: 36px 32px 28px 32px;
+      border-left: 6px solid #e26ba7;
+      border-right: 6px solid #f7c873;
+      position: relative;
+      animation: fadeIn 1.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
+    }
+    .contact h1 {
+      color: #553c9a;
+      font-size: 2.2em;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-align: center;
+      text-shadow: 1px 1px 8px #ffe0ec;
+      animation: fadeInDown 1.2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .contact p {
+      text-align: center;
+      color: #e26ba7;
+      font-size: 1.1em;
+      margin-bottom: 18px;
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    label {
+      font-weight: 500;
+      color: #6b4fe0;
+      margin-bottom: 2px;
+    }
+    input[type="text"], input[type="email"], textarea {
+      padding: 10px;
+      border: 1.5px solid #e26ba7;
+      border-radius: 6px;
+      font-size: 1em;
+      background: #fdf6e3;
+      transition: border 0.3s;
+      font-family: inherit;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+      border: 2px solid #553c9a;
+      outline: none;
+      background: #fff;
+    }
+    button[type="submit"] {
+      background: linear-gradient(90deg, #e26ba7 0%, #f7c873 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 0;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+      box-shadow: 0 2px 8px #f7c87344;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button[type="submit"]:hover {
+      background: linear-gradient(90deg, #f7c873 0%, #e26ba7 100%);
+      transform: scale(1.04);
+    }
+    .contact-info {
+      margin-top: 18px;
+      background: #f7c87322;
+      border-radius: 10px;
+      padding: 12px 0;
+      text-align: center;
+      font-size: 1.08em;
+      color: #553c9a;
+      box-shadow: 0 1px 6px #e26ba722;
+    }
+    .paintbrush-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+      animation: floatBrush 2.5s ease-in-out infinite;
+    }
+    @keyframes floatBrush {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-10px);}
+    }
+    @media (max-width: 600px) {
+      .contact { padding: 14px 4px; }
+      .contact h1 { font-size: 1.3em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="My_logo-removebg-preview.png" alt="Artist Logo">
+        <span>Sudha Art's</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <div class="paintbrush-icon">
+      <!-- SVG Paintbrush Icon -->
+      <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
+        <path d="M38 10L18 30" stroke="#553c9a" stroke-width="4" stroke-linecap="round"/>
+        <path d="M40 8C41.1046 9.10457 41.1046 10.8954 40 12L36 16C34.8954 17.1046 33.1046 17.1046 32 16L30 14C28.8954 12.8954 28.8954 11.1046 30 10L34 6C35.1046 4.89543 36.8954 4.89543 38 6L40 8Z" fill="#f7c873"/>
+      </svg>
+    </div>
+    <h1>Let's Connect!</h1>
+    <p>Have a question, commission request, or just want to say hello? Fill out the form below and I'll get back to you soon!</p>
+    <form action="submit_form.php" method="post">
+      <label for="name">Enter Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Enter Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Write Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <strong>Email:</strong> sudha@example.com<br>
+      <strong>Phone:</strong> (123) 456-7890
+    </div>
+  </section>
+</body>
+</html>
